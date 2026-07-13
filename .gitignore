@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Data and generated artifacts
+datasets/creditcard.csv
+artifacts/*.pkl
+artifacts/*.joblib
+artifacts/*.db
+*.db
+*.log
+
+# Streamlit and secrets
+.streamlit/secrets.toml
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,23 @@
+paths:
+  dataset: datasets/creditcard.csv
+  model: artifacts/random_forest.pkl
+  anomaly_model: artifacts/isolation_forest.pkl
+  metrics: artifacts/model_metrics.json
+  anomaly_config: config/anomaly_config.json
+model:
+  version: rf-fraud-v1
+anomaly:
+  contamination: 0.01
+  random_state: 42
+  threshold: 0.75
+drift:
+  p_value: 0.05
+  window_size: 500
+  check_interval: 100
+alerts:
+  latency_warning_ms: 100
+  latency_critical_ms: 250
+simulation:
+  delay_seconds: 0
+storage:
+  database_url: sqlite:///artifacts/sentinel_net.db
